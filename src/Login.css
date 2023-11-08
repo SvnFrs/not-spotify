@@ -1,19 +1,64 @@
+* {
+  font-family: 'Proxima Nova', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .login {
-  display: grid;
-  background-color: black;
   height: 100vh;
-  place-items: center;
+  background: rgb(1,1,1);
+  background: linear-gradient(rgba(26,26,26,1) 20%, rgb(0, 0, 0) 100%);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents vertically */
+  justify-content: center; /* Center contents horizontally */
+  height: 80vh;
 }
 
-.login > img {
-  height: 200px;
-}
-
-.login > a {
-  color: white;
+.card > a {
+  color: #000;
   text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  background-color: var(--background-base,#1ed760);
+  display: flex;
+  border-radius: 500px;
+  font-size: inherit;
+  min-block-size: 48px;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  padding-block: 8px;
+  padding-inline: 3vw;
+}
+.navbar {
+  display: flex;
+  align-items: center;
   padding: 20px;
-  border-radius: 99px;
-  font-weight: 800;
-  background-color: #1db954;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  height: 3vh;
+}
+
+.navbar > img {
+  padding-left: 1rem;
+  object-fit: contain;
+  width: 10rem;
+  height: 3vh;
+}
+.card {
+  /* width: 30vw; */
+  /* height: 10vh; */
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(0, 0, 0); */
+  text-align: center;
+  border-radius: 1%;
+}
+.card-header {
+  padding-top: 6vh;
+  padding-bottom: 3vh;
+  color: white;
 }
