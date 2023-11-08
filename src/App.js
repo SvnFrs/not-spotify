@@ -58,20 +58,12 @@ function App() {
         });
       });
 
-      // set device id
-      s.getMyDevices().then((devices) => {
-        dispatch({
-          type: "SET_DEVICE_ID",
-          device_id: devices.devices[0].id,
-        });
-      });
     }
   }, [token, dispatch]);
 
   return (
     <div className="app">
-      {!token && <Login />}
-      {token && <Player spotify={s} />}
+      {token ? <Player spotify={s} /> : <Login />}
     </div>
   );
 }

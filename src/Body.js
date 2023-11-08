@@ -6,7 +6,7 @@ import SongRow from "./SongRow";
 import { Favorite, MoreHoriz, PlayCircleFilled } from '@mui/icons-material';
 
 function Body({ spotify }) {
-  const [{ discover_weekly, device_id }, dispatch] = useDataLayerValue();
+  const [{ discover_weekly }, dispatch] = useDataLayerValue();
 
   const playPlaylist = (id) => {
     spotify

@@ -9,16 +9,11 @@
   color: white;
   background-color: #040404;
 }
-
-.sidebar__title {
-  margin-left: 10px;
-  padding: 5px;
-  font-size: 12px;
+hr {
+  border: 1px solid #333;
+  width: 90%;
+  margin-bottom: 10px;
 }
-
-.sidebar__logo {
-  margin-right: auto;
-  object-fit: contain;
-  height: 70px;
-  padding: 10px;
+.option {
+  padding-top: 1vh;
 }

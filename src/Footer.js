@@ -99,7 +99,7 @@ function Footer({ spotify }) {
       </div>
 
       <div className="footer__center">
-        <ShuffleIcon className="footer__green" />
+        <ShuffleIcon className="footer__on" />
         <SkipPreviousIcon onClick={skipNext} className="footer__icon" />
         {playing ? (
           <PauseCircleOutline
@@ -115,7 +115,7 @@ function Footer({ spotify }) {
           />
         )}
         <SkipNextIcon onClick={skipPrevious} className="footer__icon" />
-        <RepeatIcon className="footer__green" />
+        <RepeatIcon className="footer__on" />
       </div>
       <div className="footer__right">
         <Grid container spacing={2}>

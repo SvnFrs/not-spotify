@@ -5,7 +5,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import { useDataLayerValue } from './DataLayer';
-import { getTokenFromResponse } from "./spotify";
 
 function Sidebar() {
   const [{ playlists }, dispatch] = useDataLayerValue();
@@ -13,20 +12,20 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <img
-        className="sidebar__logo"
-        src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
-        alt=""
-      />
-      <SidebarOption Icon={HomeIcon} option="Home" />
-      <SidebarOption Icon={SearchIcon} option="Search" />
-      <SidebarOption Icon={LibraryMusicIcon} option="Your Library" />
-      <br />
-      <strong className="sidebar__title">PLAYLISTS</strong>
+      <div className="option">
+      <SidebarOption Icon={HomeIcon} title="Home" />
+      <SidebarOption Icon={SearchIcon} title="Search" />
       <hr />
+      </div>
+      <SidebarOption className='option' Icon={LibraryMusicIcon} title="Your Library" />
+      <br />
+      
       {playlists?.items?.map((playlist) => (
-        <SidebarOption option={playlist.name} />
-      ))}
+          <div>
+             <SidebarOption title={playlist.name} image={playlist.images[0]}/>
+          </div>
+          
+        )) }
     </div>
   );
 }

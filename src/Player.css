@@ -7,3 +7,8 @@
   display: flex;
   flex-grow: 1;
 }
+@media screen and (max-width: 768px) {
+  .player__body >.sidebar {
+    display: none;
+  }
+}
