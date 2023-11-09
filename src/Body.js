@@ -65,7 +65,7 @@ function Body({ spotify }) {
             className="body__shuffle"
             onClick={playPlaylist}
           />
-          <Favorite fontSize="large" />
+          <Favorite className="body__favorite" fontSize="large" />
           <MoreHoriz />
         </div>
 

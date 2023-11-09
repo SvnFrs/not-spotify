@@ -36,8 +36,9 @@
 }
 
 .body__shuffle:hover {
-  transition: 100ms transform ease-in;
+  transition: 200ms color ease-in, 200ms transform ease-in;
   transform: scale(1.08);
+  color: #f38ba8;
 }
 
 .body__background {
@@ -72,4 +73,9 @@
 
 .body__infoText > p {
   font-size: 14px;
+}
+.body__favorite:hover {
+  transition: 200ms color ease-in, 200ms transform ease-in;
+  transform: scale(1.18);
+  color:  	#d20f39;
 }
