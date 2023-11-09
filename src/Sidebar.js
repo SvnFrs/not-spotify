@@ -22,7 +22,7 @@ function Sidebar() {
       
       {playlists?.items?.map((playlist) => (
           <div>
-             <SidebarOption title={playlist.name} image={playlist.images[0]}/>
+             <SidebarOption title={playlist.name} image={playlist.images[0]} url={playlist.href.split("/").pop()} />
           </div>
           
         )) }

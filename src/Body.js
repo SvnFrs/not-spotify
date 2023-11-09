@@ -30,7 +30,6 @@ function Body({ spotify }) {
   const playSong = (id) => {
     spotify
       .play({
-        device_id: "ea627bbace4e00bbf71804159361f638fe78aed0",
         uris: [`spotify:track:${id}`],
       })
       .then((res) => {
